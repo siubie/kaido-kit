@@ -112,7 +112,7 @@ class BookResource extends Resource implements HasShieldPermissions
         return [
             'index' => Pages\ListBooks::route('/'),
             'create' => Pages\CreateBook::route('/create'),
-            // 'view' => Pages\ViewBook::route('/{record}'),
+            'view' => Pages\ViewBook::route('/{record}'),
             'edit' => Pages\EditBook::route('/{record}/edit'),
         ];
     }
@@ -121,9 +121,12 @@ class BookResource extends Resource implements HasShieldPermissions
     {
         return $infolist
             ->schema([
-                Section::make('User Information')->schema([
-                    TextEntry::make('name'),
-                    TextEntry::make('email'),
+                Section::make('Book Information')->schema([
+                    TextEntry::make('title'),
+                    TextEntry::make('author'),
+                    TextEntry::make('description'),
+                    TextEntry::make('created_at'),
+                    TextEntry::make('updated_at'),
                 ]),
             ]);
     }
