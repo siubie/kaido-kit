@@ -78,7 +78,13 @@ A powerful and opinionated FilamentPHP starter kit designed to accelerate your a
     cp .env.example .env
     ```
 
-5. Configure your database in .env
+5. Generate App Key
+
+    ```php
+    php artisan key:generate
+    ```
+
+6. Configure your database in .env
 
     ```php
     DB_CONNECTION=mysql
@@ -89,7 +95,7 @@ A powerful and opinionated FilamentPHP starter kit designed to accelerate your a
     DB_PASSWORD=
     ```
 
-6. Configure your google sign in cliend id and secret (optional)
+7. Configure your google sign in cliend id and secret (optional)
 
     ```php
     #google auth
@@ -98,7 +104,7 @@ A powerful and opinionated FilamentPHP starter kit designed to accelerate your a
     GOOGLE_REDIRECT_URI=http://localhost:8000/admin/oauth/callback/google
     ```
 
-7. Configure your resend for email sending (optional)
+8. Configure your resend for email sending (optional)
 
     ```php
     #resend
@@ -113,13 +119,13 @@ A powerful and opinionated FilamentPHP starter kit designed to accelerate your a
     MAIL_FROM_NAME="${APP_NAME}"
     ```
 
-8. Migrate your database
+9. Migrate your database
 
     ```php
     php artisan migrate --seed
     ```
 
-9. Serve the Application
+10. Serve the Application
 
     ```script
     composer run dev
