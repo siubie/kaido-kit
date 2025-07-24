@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use AchyutN\FilamentLogViewer\FilamentLogViewer;
 use App\Filament\Pages\Login;
 use App\Models\User;
 use App\Settings\KaidoSetting;
@@ -103,6 +104,9 @@ class AdminPanelProvider extends PanelProvider
             ThemesPlugin::make(),
             FilamentShieldPlugin::make(),
             ApiServicePlugin::make(),
+            FilamentLogViewer::make()
+                ->navigationGroup('Settings')
+                ->navigationIcon('heroicon-o-queue-list'),
             BreezyCore::make()
                 ->myProfile(
                     shouldRegisterUserMenu: true, // Sets the 'account' link in the panel User Menu (default = true)
