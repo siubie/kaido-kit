@@ -51,6 +51,7 @@ A powerful and opinionated FilamentPHP starter kit designed to accelerate your a
 - 🎛️ Dynamic plugin management via [Filament Settings](https://filamentphp.com/plugins/filament-spatie-settings)
     - Enable/disable features on the fly
     - [Spatie Laravel Settings](https://github.com/spatie/laravel-settings) integration
+- Log management with [Filament Log Viewer](https://github.com/achyutkneupane/filament-log-viewer)
 
 ## 🚀 Quick Start
 
